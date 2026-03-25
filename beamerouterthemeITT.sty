@@ -27,6 +27,10 @@
 \setbeamertemplate{footline}{%
   \leavevmode%
 
+    \begin{tikzpicture}[overlay]
+        \draw[ITTyellow, line width=1.5pt] (-1cm,0) -- (\paperwidth,0);
+    \end{tikzpicture}%
+
     \hbox{%
       \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.8ex,dp=1.2ex,left,leftskip=.6cm]{footline}%
         \usebeamerfont{footline}\insertshortauthor
