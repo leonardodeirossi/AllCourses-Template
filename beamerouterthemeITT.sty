@@ -1,7 +1,7 @@
-% beamerouterthemeUU.sty - frame title, footline, optional slide logo
+% beamerouterthemeITT.sty - frame title, footline, optional slide logo
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerouterthemeUU}[2026/03/17 UU Beamer Outer Theme]
+\ProvidesPackage{beamerouterthemeITT}[2026/03/17 ITT Beamer Outer Theme]
 
 \RequirePackage{tikz}
 
@@ -16,7 +16,7 @@
   \end{beamercolorbox}%
   \nointerlineskip%
   \begin{tikzpicture}[overlay]
-    \draw[UUyellow, line width=1.5pt] (-1cm,0) -- (\paperwidth,0);
+    \draw[ITTyellow, line width=1.5pt] (-1cm,0) -- (\paperwidth,0);
   \end{tikzpicture}%
   \vskip 4pt%
 }
@@ -37,7 +37,7 @@
       \end{beamercolorbox}%
     }%
   % -- Optional logo on content slides (showlogo option) --
-  \if@UUshowlogo
+  \if@ITTshowlogo
     \begin{tikzpicture}[overlay, remember picture]
       \ifx\@uulogoblackpath\@empty\else
         \node[anchor=north east, inner sep=0pt]
@@ -51,14 +51,14 @@
 % -- Thank-you / closing frame --------------------------------
 \newcommand{\thankframe}[2]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=ITTyellow}
   \begin{frame}[plain]
     \vfill
     \begin{center}
       \vspace{1cm}
-      {\color{UUblack}\Huge\rmfamily\bfseries #1}\\[14pt]
-      {\color{UUblack!35}\rule{2.4cm}{0.8pt}}\\[16pt]
-      {\color{UUblack!65}\normalsize\sffamily #2}%
+      {\color{ITTblack}\Huge\rmfamily\bfseries #1}\\[14pt]
+      {\color{ITTblack!35}\rule{2.4cm}{0.8pt}}\\[16pt]
+      {\color{ITTblack!65}\normalsize\sffamily #2}%
       \vskip 36pt%
       \ifx\@uulogoblackpath\@empty\else
         \hskip 25pt \includegraphics[height=1.6cm]{\@uulogoblackpath}%

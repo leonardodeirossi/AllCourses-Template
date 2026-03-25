@@ -1,10 +1,10 @@
-% beamerthemeUU.sty — Utrecht University Beamer Theme
+% beamerthemeITT.sty — Utrecht University Beamer Theme
 %
-% Usage:  \usetheme{UU}
+% Usage:  \usetheme{ITT}
 %
 % Options:
 %   nl            — use Dutch logo (Universiteit Utrecht)
-%   showlogo      — show small UU logo on every content slide
+%   showlogo      — show small ITT logo on every content slide
 %   nosectionpage — suppress automatic section divider slides
 %
 % Commands:
@@ -15,32 +15,32 @@
 % Logos are loaded automatically from logos/ based on the nl option.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerthemeUU}[2026/03/17 A Beamer Theme for Utrecht University]
+\ProvidesPackage{beamerthemeITT}[2026/03/17 A Beamer Theme for Utrecht University]
 
 % -- Options -----------------------------------------------------------
-\newif\if@UUnosection\@UUnosectionfalse
-\newif\if@UUnl\@UUnlfalse
-\newif\if@UUshowlogo\@UUshowlogofalse
+\newif\if@ITTnosection\@ITTnosectionfalse
+\newif\if@ITTnl\@ITTnlfalse
+\newif\if@ITTshowlogo\@ITTshowlogofalse
 
-\DeclareOption{nosectionpage}{\@UUnosectiontrue}
-\DeclareOption{nl}{\@UUnltrue}
-\DeclareOption{showlogo}{\@UUshowlogotrue}
+\DeclareOption{nosectionpage}{\@ITTnosectiontrue}
+\DeclareOption{nl}{\@ITTnltrue}
+\DeclareOption{showlogo}{\@ITTshowlogotrue}
 \ProcessOptions\relax
 
 % -- Sub-themes ----------------------------------------------------------
-\usecolortheme{UU}
-\useinnertheme{UU}
-\useoutertheme{UU}
+\usecolortheme{ITT}
+\useinnertheme{ITT}
+\useoutertheme{ITT}
 
 % -- Code listings --------------------------------------------------------
 \RequirePackage{listings}
 \lstset{
   basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\bfseries\color{UUdarkblue},
-  stringstyle=\color{UUgreen},
-  commentstyle=\itshape\color{UUdarkgray},
-  numberstyle=\tiny\color{UUdarkgray},
-  backgroundcolor=\color{UUlightgray},
+  keywordstyle=\bfseries\color{ITTdarkblue},
+  stringstyle=\color{ITTgreen},
+  commentstyle=\itshape\color{ITTdarkgray},
+  numberstyle=\tiny\color{ITTdarkgray},
+  backgroundcolor=\color{ITTlightgray},
   frame=none,
   numbers=left,
   numbersep=8pt,
@@ -83,9 +83,9 @@
 \setbeamerfont{footnote}{size=\tiny}
 
 % -- Default logo paths (based on nl option) ---------------------------
-\if@UUnl
-  \renewcommand{\@uulogopath}{images/UU_logo_NL_RGB}
-  \renewcommand{\@uulogoblackpath}{images/UU_logo_NL_ZWART}
+\if@ITTnl
+  \renewcommand{\@uulogopath}{images/ITT_logo_NL_RGB}
+  \renewcommand{\@uulogoblackpath}{images/ITT_logo_NL_ZWART}
 \else
   \renewcommand{\@uulogopath}{images/buonarroti}
   \renewcommand{\@uulogoblackpath}{images/buonarroti}
@@ -107,9 +107,9 @@
 % -- Hyperref colors ----------------------------------------------------
 \hypersetup{
   colorlinks=true,
-  linkcolor=UUdarkblue,
-  urlcolor=UUpurple,
-  citecolor=UUdarkblue,
+  linkcolor=ITTdarkblue,
+  urlcolor=ITTpurple,
+  citecolor=ITTdarkblue,
 }
 
 \endinput

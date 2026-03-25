@@ -1,7 +1,7 @@
-% beamerinnerthemeUU.sty - title page, blocks, items, special frames
+% beamerinnerthemeITT.sty - title page, blocks, items, special frames
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerinnerthemeUU}[2026/03/17 UU Beamer Inner Theme]
+\ProvidesPackage{beamerinnerthemeITT}[2026/03/17 ITT Beamer Inner Theme]
 
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
@@ -9,7 +9,7 @@
 \RequirePackage{setspace}
 \RequirePackage{etoolbox}
 
-% -- Internal: logo path storage (set by beamerthemeUU.sty) -----------
+% -- Internal: logo path storage (set by beamerthemeITT.sty) -----------
 \newcommand{\@uulogopath}{}
 \newcommand{\@uulogoblackpath}{}
 
@@ -69,7 +69,7 @@
     \vskip 2pt%
     \@uuvenue
     \ifx\insertdate\@empty\else
-      \enspace{\color{UUdarkgray}$\cdot$}\enspace\insertdate
+      \enspace{\color{ITTdarkgray}$\cdot$}\enspace\insertdate
     \fi
   \else
     \insertdate
@@ -77,20 +77,20 @@
 }
 
 % -- Itemize -----------------------------------------------------------
-\setbeamertemplate{itemize item}{\scriptsize\raise1.5pt\hbox{\color{UUyellow}\vrule width 6pt height 6pt}}
-\setbeamertemplate{itemize subitem}{\scriptsize\raise1.5pt\hbox{\color{UUorange}\vrule width 5pt height 5pt}}
-\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.5pt\hbox{\color{UUbrown}\vrule width 4pt height 4pt}}
+\setbeamertemplate{itemize item}{\scriptsize\raise1.5pt\hbox{\color{ITTyellow}\vrule width 6pt height 6pt}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.5pt\hbox{\color{ITTorange}\vrule width 5pt height 5pt}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.5pt\hbox{\color{ITTbrown}\vrule width 4pt height 4pt}}
 
 % -- Enumerate ---------------------------------------------------------
 \setbeamertemplate{enumerate item}{%
   \tikz[baseline=(num.base)]{
-    \node[fill=UUyellow, text=UUwhite, font=\footnotesize\bfseries,
+    \node[fill=ITTyellow, text=ITTwhite, font=\footnotesize\bfseries,
           minimum size=1.4em, inner sep=0pt] (num) {\insertenumlabel};
   }%
 }
 \setbeamertemplate{enumerate subitem}{%
   \tikz[baseline=(num.base)]{
-    \node[fill=UUlightgray, text=UUwhite, font=\footnotesize\bfseries,
+    \node[fill=ITTlightgray, text=ITTwhite, font=\footnotesize\bfseries,
           minimum size=1.2em, inner sep=0pt] (num) {\insertenumlabel};
   }%
 }
@@ -150,7 +150,7 @@
 \setbeamertemplate{title page}{%
   \begin{tikzpicture}[remember picture, overlay]
     % -- Yellow accent bar on left edge --
-    \fill[UUyellow]
+    \fill[ITTyellow]
       (current page.north west) rectangle
       ([xshift=8mm]current page.south west);
    
@@ -171,7 +171,7 @@
     \fi
   \end{beamercolorbox}
   \vskip 8pt%
-  {\color{UUyellow}\hspace{0.5cm}\rule{3cm}{1.5pt}}%
+  {\color{ITTyellow}\hspace{0.5cm}\rule{3cm}{1.5pt}}%
   \vskip 12pt%
   %
   \if@uumultiauthor
@@ -212,7 +212,7 @@
 % ======================================
 %  SECTION PAGE
 % ======================================
-\if@UUnosection\else
+\if@ITTnosection\else
 \AtBeginSection[]{%
   \begin{frame}
     \frametitle{Indice}
@@ -226,14 +226,14 @@
 % ======================================
 \newcommand{\standoutframe}[1]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=ITTyellow}
   \begin{frame}[plain]
     \vfill
     \begin{center}
-      {\color{UUblack}\rule{3cm}{1.5pt}}\\[14pt]
-      {\color{UUblack}\LARGE\rmfamily\bfseries #1\par}%
+      {\color{ITTblack}\rule{3cm}{1.5pt}}\\[14pt]
+      {\color{ITTblack}\LARGE\rmfamily\bfseries #1\par}%
       \vskip 14pt%
-      {\color{UUblack}\rule{3cm}{1.5pt}}%
+      {\color{ITTblack}\rule{3cm}{1.5pt}}%
     \end{center}
     \vfill
   \end{frame}
@@ -248,13 +248,13 @@
 % Useful with the nosectionpage option, or to insert a divider mid-section.
 \newcommand{\sectionframe}[1]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=ITTyellow}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UUblack}\rule{4cm}{2pt}}\\[8pt]%
+    {\color{ITTblack}\rule{4cm}{2pt}}\\[8pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UUblack}\LARGE\rmfamily\bfseries #1}%
+    {\color{ITTblack}\LARGE\rmfamily\bfseries #1}%
     \vfill
   \end{frame}
   \endgroup
@@ -263,12 +263,12 @@
 % -- Table of contents styling -----------------------------------------
 \setbeamertemplate{section in toc}{%
   \tikz[baseline=(num.base)]{
-    \node[fill=UUyellow, text=UUwhite, font=\footnotesize\bfseries,
+    \node[fill=ITTyellow, text=ITTwhite, font=\footnotesize\bfseries,
           minimum size=1.4em, inner sep=0pt] (num) {\inserttocsectionnumber};
   }\hspace{0.5em}\inserttocsection\par
 }
 \setbeamertemplate{subsection in toc}{%
-  \hspace{2em}{\color{UUorange}\rule{4pt}{4pt}}\hspace{0.5em}%
+  \hspace{2em}{\color{ITTorange}\rule{4pt}{4pt}}\hspace{0.5em}%
   {\small\inserttocsubsection}\par
 }
 
