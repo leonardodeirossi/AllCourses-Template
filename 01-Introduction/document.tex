@@ -1,0 +1,43 @@
+\documentclass[
+    11pt,
+    aspectratio=169
+]{beamer}
+
+\usetheme[showlogo]{UU}
+
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\usepackage{course}
+\usepackage{lecture}
+
+\title[\LectureDetails]{\LectureTopic}
+\subtitle{\LectureDetails}
+\author[Prof. L. E. Dei Rossi]{Prof. Leonardo Essam Dei Rossi}
+% \institute{ITT "M. Buonarroti" - Trento (TN)}
+\date{Anno scolastico \CourseSchoolYear}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\include{credits}
+
+
+\begin{frame}{Indice}
+  \tableofcontents
+\end{frame}
+
+% -----
+
+
+
+% -----
+
+\begin{frame}{Riferimenti e approfondimenti}
+  \printbibliography
+\end{frame}
+
+\end{document}
